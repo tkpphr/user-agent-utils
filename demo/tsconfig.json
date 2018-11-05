@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "removeComments": true,
+      "alwaysStrict": true,
+      "allowUnreachableCode": false,
+      "allowUnusedLabels": false,
+      "noImplicitAny":true,
+      "noImplicitThis":true,
+      "noImplicitReturns": true,
+      "noUnusedLocals":true,
+      "noUnusedParameters": true,
+      "target": "ES5",
+      "outDir": "./dist/ts/",
+      "module": "commonjs",
+      "lib": ["es6","dom"],
+      "sourceMap": true
+    },
+    "exclude": [
+      "./node_modules",
+      "./dist"
+    ]
+}

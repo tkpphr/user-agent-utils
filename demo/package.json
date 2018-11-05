@@ -1,0 +1,36 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "npm-run-all -s clean:* debug:*",
+    "debug:ts": "tsc",
+    "debug:webpack": "webpack --devtool source-map",
+    "release": "npm-run-all -s  clean:* release:*",
+    "release:ts": "tsc --sourceMap false",
+    "release:webpack": "webpack --devtool false --optimize-minimize",
+    "watch": "npm-run-all -p watch:*",
+    "watch:webpack-dev-server": "webpack-dev-server",
+    "clean": "npm-run-all -s clean:*",
+    "clean:ts": "rimraf ./dist/ts/",
+    "clean:webpack": "rimraf ./dist/bundle.*",
+    "lint": "tslint './src/**/*.ts{,x}' --force -t stylish",
+    "lint-fix": "tslint './src/**/*.ts{,x}' --force -t stylish --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^3.2.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "user-agent-utils": "../"
+  }
+}

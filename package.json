@@ -1,0 +1,31 @@
+{
+  "name": "user-agent-utils",
+  "version": "1.0.0",
+  "description": "Get user agent information.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "debug": "npm-run-all -s clean:* debug:*",
+    "debug:ts": "tsc",
+    "release": "npm-run-all -s  clean:* release:*",
+    "release:ts": "tsc --sourceMap false",
+    "clean": "npm-run-all -s clean:*",
+    "clean:ts": "rimraf ./lib/",
+    "lint": "tslint './src/**/*.ts{,x}' --force -t stylish",
+    "lint-fix": "tslint './src/**/*.ts{,x}' --force -t stylish --fix"
+  },
+  "keywords": ["utility","user-agent"],
+  "author": "tkpphr",
+  "license": "MIT",
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/tkpphr/user-agent-utils.git"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {}
+}
